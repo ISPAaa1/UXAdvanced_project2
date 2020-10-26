@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>트수의 완성</title>
+	<style type="text/css">
+		html{scroll-behavior: smooth;}
+		@font-face {
+    		font-family: 'GmarketSansBold';
+    		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    		font-weight: normal;
+   	 		font-style: normal;}
+   	 	@font-face {
+    		font-family: 'GmarketSansMedium';
+    		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    		font-weight: normal;
+    		font-style: normal;}
+    	@font-face {
+    		font-family: 'GmarketSansLight';
+    		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    		font-weight: normal;
+    		font-style: normal;}
+    	@font-face {
+    		font-family: 'TmonMonsori';
+    		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff')	 format('woff');
+    		font-weight: normal;
+    		font-style: normal;}
+		body,h1,h2,h3,p,img,div,ol,ul,li,nav{margin:0; padding: 0;}
+		body{background-image: url(outsidebg.jpg); width:100%; background-repeat: repeat;}
+		.divider{display:block; width: 100%;}
+		nav{width: 150px; height: 350px; position: fixed; z-index: 2; padding-top: 15px;}
+		nav ul{list-style: none; padding:0; vertical-align:middle; font-size: 1.5em;}
+		nav li{margin-top: 30px; box-shadow: 0px 5px 6px 3px rgba(0,0,0,0.45);border-radius: 0px 7px 7px 0px; font-size: 0.9em;}
+		a{text-decoration: none; color: black;}
+		.homebuttondiv{width: 130px; padding: 12px;}
+		.homebutton{width: 130px;}
+		.index_sticker{background-image: url(index_sticker_cut.png); width: 150px; height: 75px; background-size: cover;}
+		.navnum{font-family:GmarketSansBold; font-size: 1em; line-height: 80px;}
+		.navname{font-family:GmarketSansMedium; font-size: 0.85em;}
+		header{background-image: url(paper.jpg); background-size: 100% auto; box-shadow: 0px 20px 25px 7px rgba(0,0,0,0.45); height: 1200px;}
+		.blank{width:100px; height: 95px;}
+		header hr{border: solid;}
+		.p1{text-align: center; font-size: 1.4em; font-family: GmarketSansMedium;}
+		.p2{text-align: center; font-size: 1.65em; font-family: GmarketSansBold;}
+		header div{width: 1300px; display: block; margin: auto;}
+		header .titleimg{display:block; width: 660px; margin: auto; padding-top: 15px; padding-bottom: 100px;}
+		.headflex{display: flex; width: 1000px; justify-content: center; padding: 1%; padding-top: 70px;margin: center;}
+		header .fleximg{width: 50%; object-fit: cover; margin: 17px;}
+		header .flexp{width: 50%; margin:15px;}
+		.checkline{border: none;border-top: 3px dotted black; height: 1px; width: 176px; margin-top: 30px; padding-top: 18px;}
+		.cost{font-size: 1.1em; line-height: 2.11em; text-align: right;}
+		.checkflex{display: flex; width: 100%;}
+		.checkbox{margin-top: 5px; padding-bottom: 13px;}
+		.checkstyle{display: inline-block;width: 20px;height: 20px; cursor: pointer;}
+		.ph_title{margin: auto; z-index: 1; box-shadow: 0px 35px 20px 7px rgba(0,0,0,0.45);}
+		header h1{font-family:GmarketSansBold; font-size: 2.5em;}
+		header ul{font-family: GmarketSansMedium;font-size: 1.5em; list-style: none; padding: 8px;}
+		header li{padding-top: 15px;}
+		.buttonflex{width: 100%; display: flex; justify-content: space-around;}
+		.button{z-index: 1; background-image: url(buybutton.png); background-size: contain; background-repeat: no-repeat; border: none; color: black; letter-spacing: 0.07em; padding:90px 40px 70px 37px; text-align: center; text-decoration: none; display: inline-block; font-family: GmarketSansBold; font-size: 1.5em; cursor: pointer;}
+		<!--▼▼▼트수 설명 및 공백▼▼▼-->
+		.underhead_blank{width: 900px;}
+		.underhead_shadow{width:900px; display: block; margin: auto;}
+		.twitchlogo{width: 50px; display: block; margin:auto; padding-top: 160px;}
+		.talk_bubble{width: 600px; height: 500px; background-image: url(talk_bubble.png); display: block; background-size: 600px; background-repeat: no-repeat; margin: auto; text-align: center; font-family: GmarketSansMedium; margin-top: 300px; padding-bottom: 500px;}
+		.txtoutline{text-shadow: -1px 0 #ead9bc, 0 1px #ead9bc, 1px 0 #ead9bc, 0 -1px #ead9bc;}
+		section{width:100%; display: block; margin: auto;}
+		section .row{width:900px; background-color: #ead9bc; display: block; margin: auto;}
+		.twitboy{padding-top: 10px;}
+		<!--▼▼▼안락킷트▼▼▼-->
+		.kit1{height: 500px; text-align: center;}
+		.minititle{width: 180px; display: block; margin: auto;}
+		.title{width: 600px; display: block; margin:auto; object-fit: contain; margin-top: 15px; margin-bottom: 100px;}
+		.titlelong{width: 720px; display: block; margin:auto; object-fit: contain; margin-top: 15px; margin-bottom: 100px;}
+		.kit1_main{width: 900px; height: 900px; display: block; margin: auto; background-image: url(kit1_main.png); background-size: contain; background-repeat: no-repeat; padding-top: 40px;}
+		.namba{text-align: center; font-family: GmarketSansLight; font-size: 0.8em; display:block; margin:auto; width:110px; color: white; background-color: #28641A; border-radius: 40px 40px 40px 40px; margin-top: 150px; margin-bottom: 15px;}
+		section h1{font-family: TmonMonsori; font-size: 2.3em;}
+		section h2{font-family: GmarketSansBold; font-size: 2.2em; line-height: 1.3em; padding-bottom: 20px;}
+		section h3{font-family: TmonMonsori; font-size: 3em;}
+		section h4{font-family: GmarketSansBold; font-size: 2.7em; line-height: 1.3em; margin-bottom: 0;}
+		.law{padding-top: 30px; font-style: italic; color: #6f5f59;padding-bottom: 465px;}
+		.framenum{font-size: 0.6em; line-height: 3.9em; color: #6f554b}
+		.kitcost{font-size: 2em; font-family: TmonMonsori;}
+		.tcenter{text-align: center;}
+		.twhite{color: white;}
+		.tbrown{color: #60544a;}
+		.bgbrown{background-color: #60544a;}
+		.lightp{font-family: GmarketSansMedium;font-size: 0.8em;}
+		.Mediump{font-family: GmarketSansMedium;font-size: 1em;}
+		.Semiboldp{font-family: GmarketSansMedium; font-size: 1.2em; padding-top: 20px;}
+		.Boldp{font-family: GmarketSansBold; font-size: 1.1em;}
+		.Boldbigp{font-family: GmarketSansBold; font-size: 1.5em;}
+		.leftalg{text-align: left; padding-left: 15px;}
+		.rightalg{text-align: right; padding-right: 15px;}
+		._1line{width:100px; height:30px; display: block; margin: auto;}
+		.nuki{width: 550px; display: block; margin:auto; padding-bottom: 30px;}
+		.itemname{color: #fff; -webkit-text-stroke: 2px #000; text-shadow:  4px 4px 0 #28641A,  8px 8px 0 #174111; padding-bottom: 220px;}
+		.txtblacksd_r{text-shadow:  4px 4px 0 #000;}
+		.txtblacksd_l{text-shadow:  -4px 4px 0 #000;}
+		._3flex{width: 80%; display: flex; margin: auto; justify-content: space-between; padding-bottom: 200px;}
+		._3fcompo{width: 80%; height: 80%; object-fit: contain; display: block; margin: auto; padding-bottom: 15px;}
+		._2flex{width: 80%; display: flex; margin: auto; justify-content: space-between; padding-bottom: 25px;}
+		._2fcompo{width: 350px; height: auto; object-fit: contain; display: block; margin: auto;}
+		.gif{display: block; margin:auto; width: 70%;}
+		.processnum{font-family: GmarketSansBold; font-size: 2.5em; line-height: 1.2em; padding-right: 10px;}
+		.process{font-family: GmarketSansMedium; font-size: 1.2em; text-align: center;}
+		<!--푸터-->
+		footer{padding-bottom: 100px;}
+		footer div{width:100%; background-color: #000;}
+		footer p{padding-top: 100px; padding-bottom: 100px; color: white; text-align: center; font-size: 0.8em;}
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="homebuttondiv">
+			<a href="#"> <img class="homebutton" src="homebutton.png"> </a>
+		</div>
+		<ul>
+			<li class="index_sticker">
+				<a href="#kit1">
+					<span class="navnum">&nbsp;&nbsp;1</span>
+					<span class="navname"><안락>킷트</span>
+				</a>
+			</li>
+			<li class="index_sticker">
+				<a href="#kit2">
+					<span class="navnum">&nbsp;&nbsp;2</span>
+					<span class="navname"><품격>킷트</span>
+				</a>
+			</li>
+			<li class="index_sticker">
+				<a href="#kit3">
+					<span class="navnum">&nbsp;&nbsp;3</span>
+					<span class="navname"><든든>킷트</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<header>
+		<img class="divider" src="divider1.png">
+		<div class="row blank"></div>
+		<p class="p1">당신의 방구석 스맛트폰 백수생활을</p>
+		<p class="p2">한 단계 업-그레이드!</p>
+		<img class="titleimg" src="title.png">
+		<div class="headflex">
+			<img class="fleximg ph_title" src="o_all1.jpg">
+			<div class="flexp">
+				<h1>‘트수의 완성’ 킷-트</h1><hr>
+				<div class="checkflex">
+					<ul>
+						<li> 안락 킷트</li>
+						<li> 품격 킷트</li>
+						<li> 든든 킷트</li>
+					</ul>
+					<ul>
+						<hr class="checkline">
+						<hr class="checkline">
+						<hr class="checkline">
+					</ul>
+					<ul class="cost">
+						<li> 11720원</li>
+						<li> 3940원</li>
+						<li> 5000원</li>
+					</ul>
+					<ul class="checkbox">
+						<li><input type='checkbox' class="checkstyle" name='kit' value='1' /></li>
+						<li><input type='checkbox' class="checkstyle" name='kit' value='2' /></li>
+						<li><input type='checkbox' class="checkstyle" name='kit' value='3' /></li>
+					</ul>
+				</div>
+				<div class="buttonflex">
+					<a href="" class="button txtoutline"> 장바구니 </a>
+					<a href="" class="button txtoutline"> 구매하기 </a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="underhead_blank">
+		<div class="row">
+			<img class="underhead_shadow" src="underhead_shadow.png">
+			<div class="talk_bubble">
+				<img class="twitchlogo" src="twitch.png">
+				<h2 class="twitboy"><span class="txtoutline">‘트수’</span> 란?</h2>
+				<p class="lightp"><br>트위치의 ‘트’와 백수의 ‘수’를 합친 말로<br>트위치 시청자를 일컫는 단어이다.<br>온종일 개인방송만 시청하니 백수일 거란 생각에서(...)<br><br>
+					하지만 이름만 보고 판단하기엔 섣부르다.<br>
+					그동안 알고있었던 평범하고 개성없는 백수는 잊어라!<br><br>
+					이제 이 키트와 함께라면, 당신도 차원이 다른 고품격 트수가 될 수 있다.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="kit1" id="kit1">
+		<div class="row">
+			<img class="divider" src="divider2.png">
+			<img class="minititle" src="kit1_minititle.png">
+			<img class="title" src="kit1_title.png">
+			<div class="kit1_main">
+				<h1 class="tcenter"><span class="framenum">=1=</span><br><안락>킷-트</h1>
+				<p class="law tcenter Mediump">“구질함 속에서도<br>안락함을 찾을 수 있는 자가<br>진정한 트수다.”</p>
+				<p class="kitcost tcenter">11,720원</p>
+			</div>
+			<p class="namba">Item No.1</p>
+			<p class="tcenter Mediump">아직도 손바닥만한 화면으로 방송을 보고있나, HOXY?</p>
+			<div class="_1line"></div>
+			<h2 class="tcenter">최강의 갓성비로<br>거대한 화면을 경험하라</h2>
+			<div class="_1line"></div>
+			<img class="nuki" src="item1_nuki.png">
+			<h3 class="itemname tcenter">“레트로 TV 스맛-트폰 확대스크린”</h3>
+			<div class="bgbrown">
+				<div class="blank"></div>
+				<div class="_2flex">
+					<div class="_2fcompo"><img class="_2fcompo leftboxshd" src="bigscreen.png"></div>
+					<div class="_2fcompo"><div class="_1line"></div><h2 class="leftalg twhite txtblacksd_r">당신의 눈을 한결<br>편안하게 해 줄<br>8in 대화면!</h2></div>
+				</div>
+				<div class="_2flex">
+					<div class="_2fcompo"><h2 class="rightalg twhite txtblacksd_l"><div class="_1line"></div>울림통 효과로 증폭된<br>실감나는 사운드!</h2></div>
+					<div class="_2fcompo"><img class="_2fcompo rightboxshd" src="sound.png"></div>
+				</div>
+				<div class="_2flex">
+					<div class="_2fcompo"><img class="_2fcompo leftboxshd" src="interior.png"></div>
+					<div class="_2fcompo"><h2 class="leftalg twhite txtblacksd_r"><div class="_1line"></div>레트로한 감성으로<br>인테리어 점수<br> 쁘라-스!</h2></div>
+				</div>
+				<div class="blank"></div>
+			</div>
+			<div class="blank"></div>
+			<div class="blank"></div>
+			<h2 class="tcenter">=구성품=</h2>
+			<div class="_3flex">
+				<div class="_3fcompo">
+					<img class="_3fcompo" src="item1_1.png">
+					<p class="Boldbigp tcenter">렌즈상자</p>
+				</div>
+				<div class="_3fcompo">
+					<img class="_3fcompo" src="item1_2.png">
+					<p class="Boldbigp tcenter">뒷상자</p>
+				</div>
+				<div class="_3fcompo">
+					<img class="_3fcompo" src="item1_3.png">
+					<p class="Boldbigp tcenter">흡착패드 상자</p>
+				</div>
+			</div>
+			<div class="bgbrown">
+				<div class="blank"></div>
+				<h4 class="tcenter">당신이 해야 할 일은<br>그저 상자에 폰을 넣는 것 뿐.</h4>
+				<div class="_1line"></div>
+				<p class="Semiboldp process twhite"><span class="processnum">1</span>흡착고무가 달린 작은 상자에 핸드폰을 붙인다</p>
+				<img class="gif" src="tv_1.gif">
+				<div class="_1line"></div>
+				<p class="Semiboldp process twhite"><span class="processnum">2</span> 뒷상자에 흡착패드 상자를 끼워넣는다</p>
+				<img class="gif" src="tv_2.gif">
+				<div class="_1line"></div>
+				<p class="Semiboldp process twhite"><span class="processnum">3</span> 렌즈상자를 뚜껑닫듯이 뒷면상자 위에 끼운다</p>
+				<img class="gif" src="tv_3.gif">
+				<div class="blank"></div>
+				<div class="blank"></div>
+			</div>
+			<div class="blank"></div>
+			<div class="blank"></div>
+
+			<p class="namba">Item No.2</p>
+			<p class="tcenter Mediump">작은 화면에 빨려 들어갈 것처럼 움츠려야했던 당신의 목을 위해</p>
+			<div class="_1line"></div>
+			<h2 class="tcenter">내가 아픈 곳은<br>내가 제일 잘 알지</h2>
+			<div class="_1line"></div>
+			<img class="nuki" src="item2_nuki.png">
+			<h3 class="itemname tcenter">“소프트볼 목 안마기”</h3>
+			<div class="bgbrown">
+				<div class="blank"></div>
+				<div class="_2flex">
+					<div class="_2fcompo"><img class="_2fcompo leftboxshd" src="handle.png"></div>
+					<div class="_2fcompo"><div class="_1line"></div><h2 class="leftalg twhite txtblacksd_r">잡기도 쉽고<br>손도 시원한<br>지압형 손잡이!</h2></div>
+				</div>
+				<div class="_2flex">
+					<div class="_2fcompo"><h2 class="rightalg twhite txtblacksd_l"><div class="_1line"></div>이중 지지대 구조로<br>더욱 유연하고<br>시원하게!</h2></div>
+					<div class="_2fcompo"><img class="_2fcompo rightboxshd" src="doubletrus.png"></div>
+				</div>
+				<div class="_2flex">
+					<div class="_2fcompo"><img class="_2fcompo leftboxshd" src="diy.png"></div>
+					<div class="_2fcompo"><h2 class="leftalg twhite txtblacksd_r"><div class="_1line"></div>어디서 주워온<br>공으로 만든 듯한<br>방구석 DIY 감성(?)</h2></div>
+				</div>
+				<div class="blank"></div>
+			</div>
+			<div class="blank"></div>
+			<div class="blank"></div>
+				<h4 class="tcenter">나에게 맞는 강도와 방향으로<br>마음껏 문질러보자</h4>
+				<div class="_1line"></div>
+				<div class="_1line"></div>
+				<div class="_2flex">
+					<div class="_2fcompo">
+						<img class="_2fcompo leftboxshd" src="massage_1.gif">
+						<p class="Semiboldp process tbrown">양손으로 손잡이를 잡고<br>안쪽으로 당겨준다</p>
+					</div>
+					<div class="_2fcompo">
+						<img class="_2fcompo leftboxshd" src="massage_2.gif">
+						<p class="Semiboldp process tbrown">그냥 끼워만 둬도<br>엄청난 지압효과</p>
+					</div>
+				</div>
+				<div class="blank"></div>
+				<div class="blank"></div>
+			</div>
+		</div>
+	</section>
+	<section class="kit2" id="kit2">
+		<div class="row">
+			<img class="divider" src="divider3.png">
+			<img class="minititle" src="kit2_minititle.png">
+			<img class="title" src="kit2_title.png">
+		</div>
+	</section>
+	<section class="kit3" id="kit3">
+		<div class="row">
+			<img class="divider" src="divider4.png">
+			<img class="minititle" src="kit3_minititle.png">
+			<img class="titlelong" src="kit3_title.png">
+		</div>
+	</section>
+
+	<footer>
+		<div><p>©2020. Juna Won. All rights reserved.</p></div>
+	</footer>
+</body>
+</html>
